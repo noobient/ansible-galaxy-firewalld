@@ -23,7 +23,7 @@
   vars:
     packages:
       - netbase
-  when: ansible_os_family == "Debian"
+  when: ansible_facts['os_family'] == "Debian"
 
 # take a leap of faith, SSH is enabled by default
 # and the firewalld module does not work on Ubuntu
